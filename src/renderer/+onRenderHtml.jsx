@@ -1,9 +1,21 @@
 // https://vike.dev/onRenderHtml
 export { onRenderHtml }
 
-import { escapeInject } from 'vike/server'
+import React from 'react'
+import { renderToString } from 'react-dom/server'
+import { escapeInject, dangerouslySkipEscape } from 'vike/server'
+import { PageLayout } from './PageLayout'
 
-async function onRenderHtml() {
+async function onRenderHtml(pageContext) {
+  const { Page } = pageContext
+  const pageHtml = dangerouslySkipEscape(
+    renderToString(
+      <PageLayout>
+        <Page />
+      </PageLayout>,
+    ),
+  )
+
   return escapeInject`
 <!doctype html>
 <html lang="en">
@@ -14,7 +26,7 @@ async function onRenderHtml() {
     <title>Vite + React</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">${pageHtml}</div>
   </body>
 </html>
 `
