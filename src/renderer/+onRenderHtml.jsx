@@ -1,3 +1,10 @@
+// https://vike.dev/onRenderHtml
+export { onRenderHtml }
+
+import { escapeInject } from 'vike/server'
+
+async function onRenderHtml() {
+  return escapeInject`
 <!doctype html>
 <html lang="en">
   <head>
@@ -8,6 +15,7 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
+`
+}
