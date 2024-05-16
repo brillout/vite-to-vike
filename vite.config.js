@@ -4,5 +4,5 @@ import vike from 'vike/plugin'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), vike()],
+  plugins: [react(), vike({ prerender: true })],
 })
