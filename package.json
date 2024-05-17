@@ -4,17 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "npm run server:dev",
-    "prod": "npm run build && npm run server:prod",
+    "dev": "vite",
     "build": "vite build",
-    "server:dev": "node ./server",
-    "server:prod": "cross-env NODE_ENV=production node ./server"
+    "preview": "vite preview"
   },
   "dependencies": {
-    "compression": "^1.7.4",
-    "cross-env": "^7.0.3",
-    "express": "^4.19.2",
-    "sirv": "^2.0.4",
     "vike": "^0.4.171",
     "vue": "^3.4.21"
   },
