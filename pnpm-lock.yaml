@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@vue/server-renderer':
+    specifier: ^3.4.27
+    version: 3.4.27(vue@3.4.27)
   vike:
     specifier: ^0.4.171
     version: 0.4.171(vite@5.2.11)
