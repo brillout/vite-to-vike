@@ -11,6 +11,9 @@ dependencies:
   vike:
     specifier: ^0.4.171
     version: 0.4.171(vite@5.2.11)
+  vike-vue:
+    specifier: ^0.6.6
+    version: 0.6.6(vike@0.4.171)(vue@3.4.27)
   vue:
     specifier: ^3.4.21
     version: 3.4.27
@@ -954,6 +957,16 @@ packages:
   /totalist@3.0.1:
     resolution: {integrity: sha512-sf4i37nQ2LBx4m3wB74y+ubopq6W/dIzXg0FDGjsYnZHVa1Da8FH853wlL2gtUhg+xJXjfk3kUZS3BRoQeoQBQ==}
     engines: {node: '>=6'}
+    dev: false
+
+  /vike-vue@0.6.6(vike@0.4.171)(vue@3.4.27):
+    resolution: {integrity: sha512-e4hrI9xx9FekyJX2yJCTbCag8WS77xergjkuCJ2ose6sXjfnWKTkiOnYvwVCvEtQMAALzBCoRdtA6MmewQHF6w==}
+    peerDependencies:
+      vike: ^0.4.160
+      vue: ^3.0.0
+    dependencies:
+      vike: 0.4.171(vite@5.2.11)
+      vue: 3.4.27
     dev: false
 
   /vike@0.4.171(vite@5.2.11):
