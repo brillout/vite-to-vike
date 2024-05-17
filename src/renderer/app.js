@@ -1,4 +1,4 @@
-import { createApp as createVueApp, h } from 'vue'
+import { createSSRApp, h } from 'vue'
 import PageLayout from './PageLayout.vue'
 
 export { createApp }
@@ -10,6 +10,6 @@ function createApp(pageContext) {
       return h(PageLayout, {}, { default: () => h(Page) })
     },
   }
-  const app = createVueApp(PageWithLayout)
+  const app = createSSRApp(PageWithLayout)
   return app
 }

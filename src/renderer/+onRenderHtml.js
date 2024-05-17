@@ -1,9 +1,14 @@
 // https://vike.dev/onRenderHtml
 export { onRenderHtml }
 
-import { escapeInject } from 'vike/server'
+import { renderToString } from '@vue/server-renderer'
+import { escapeInject, dangerouslySkipEscape } from 'vike/server'
+import { createApp } from './app'
 
-async function onRenderHtml() {
+async function onRenderHtml(pageContext) {
+  const app = createApp(pageContext)
+  const appHtml = await renderToString(app)
+
   return escapeInject`
 <!doctype html>
 <html lang="en">
@@ -14,7 +19,7 @@ async function onRenderHtml() {
     <title>Vite + Vue</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">${dangerouslySkipEscape(appHtml)}</div>
   </body>
 </html>
 `
