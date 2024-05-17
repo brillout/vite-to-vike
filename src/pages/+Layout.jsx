@@ -1,9 +1,9 @@
-export { PageLayout }
+export { Layout }
 
 import React from 'react'
-import './PageLayout.css'
+import './Layout.css'
 
-function PageLayout({ children }) {
+function Layout({ children }) {
   return (
     <React.StrictMode>
       <Navigation>
