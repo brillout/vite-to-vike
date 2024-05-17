@@ -2,15 +2,24 @@
 export { onRenderClient }
 
 import React from 'react'
-import { hydrateRoot } from 'react-dom/client'
+import { hydrateRoot, createRoot } from 'react-dom/client'
 import { PageLayout } from './PageLayout'
 
+let root
 async function onRenderClient(pageContext) {
   const { Page } = pageContext
-  hydrateRoot(
-    document.getElementById('root'),
+  const container = document.getElementById('root')
+  const page = (
     <PageLayout>
       <Page />
-    </PageLayout>,
+    </PageLayout>
   )
+  if (pageContext.isHydration) {
+    root = hydrateRoot(container, page)
+  } else {
+    if (!root) {
+      root = createRoot(container)
+    }
+    root.render(page)
+  }
 }
