@@ -1,3 +1,14 @@
+<template>
+  <div class="navigation">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+  </div>
+  <div class="content"><slot /></div>
+</template>
+
+<style>
+/* This CSS is common to all pages */
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -75,3 +86,15 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+</style>
+
+<style scoped>
+.navigation {
+  padding-bottom: 25px;
+  padding-top: 5px;
+  font-size: 1.2em;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+</style>
