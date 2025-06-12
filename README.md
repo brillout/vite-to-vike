@@ -44,7 +44,7 @@ Either:
 
 > [!NOTE]  
 > Instead of using [`vike-react`](https://vike.dev/vike-react), you can piggyback the features of the following:
-> - [/boilerplates/boilerplate-react-ts](https://github.com/vikejs/vike/tree/main/boilerplates/boilerplate-react-ts)
+> - [/packages/create-vike-core/boilerplate-react-ts](https://github.com/vikejs/vike/tree/main/packages/create-vike-core/boilerplate-react-ts)
 > - [/examples/react-full](https://github.com/vikejs/vike/tree/main/examples/react-full)
 > - [`vike-react` > Under the hood](https://vike.dev/vike-react#under-the-hood)
 
