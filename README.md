@@ -44,7 +44,7 @@ Either:
 
 > [!NOTE]  
 > Instead of using [`vike-vue`](https://vike.dev/vike-vue), you can piggyback the features of the following:
-> - [/boilerplates/boilerplate-vue-ts](https://github.com/vikejs/vike/tree/main/boilerplates/boilerplate-vue-ts)
+> - [/packages/create-vike-core/boilerplate-vue-ts](https://github.com/vikejs/vike/tree/main/packages/create-vike-core/boilerplate-vue-ts)
 > - [/examples/vue-full](https://github.com/vikejs/vike/tree/main/examples/vue-full)
 > - [`vike-vue` > Under the hood](https://vike.dev/vike-vue#under-the-hood)
 
